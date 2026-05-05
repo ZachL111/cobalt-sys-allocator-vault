@@ -1,0 +1,6 @@
+Package: CobaltSysAllocatorVault
+Type: Package
+Title: CobaltSysAllocatorVault
+Version: 0.1.0
+License: MIT
+Description: Build an R toolkit that studies allocator behavior through fixture event logs, with golden state snapshots and no production deployment claims.
