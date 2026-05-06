@@ -1,0 +1,73 @@
+{
+  "repo": "cobalt-sys-allocator-vault",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies allocator behavior through fixture event logs, with golden state snapshots and no production deployment claims.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 69,
+      "slack": 53,
+      "drag": 29,
+      "confidence": 84,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 77,
+      "slack": 54,
+      "drag": 12,
+      "confidence": 92,
+      "score": 264,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 86,
+      "slack": 39,
+      "drag": 32,
+      "confidence": 94,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 89,
+      "slack": 23,
+      "drag": 31,
+      "confidence": 82,
+      "score": 190,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 67,
+      "slack": 48,
+      "drag": 29,
+      "confidence": 91,
+      "score": 186,
+      "lane": "ship"
+    }
+  ]
+}
