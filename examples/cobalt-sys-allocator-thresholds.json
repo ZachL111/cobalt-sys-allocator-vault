@@ -1,0 +1,17 @@
+{
+  "repo": "cobalt-sys-allocator-vault",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 158,
+    "watch": 106
+  },
+  "terms": [
+    "allocation pressure",
+    "dirty state",
+    "guard slack",
+    "layout drift"
+  ]
+}

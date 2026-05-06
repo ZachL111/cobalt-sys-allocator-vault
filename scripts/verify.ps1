@@ -63,3 +63,9 @@ Rscript tests/test_policy.R
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-cobalt-sys-allocator-detail.ps1
 
 Rscript tests/test_domain_review.R
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-cobalt-sys-allocator-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-cobalt-sys-allocator-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
